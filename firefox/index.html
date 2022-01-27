@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Disabling JavaScript in Firefox</title>
+		<link rel="stylesheet" href="../css.css"/>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<div class="nav-container">
+			<div class="nav">
+				<a href="/">Home</a>
+				<div class="dropdown">
+					Disabling JS &#9660;
+					<div class="dropdown-content">
+						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
+						<a href="/chromium"><img class="icon" src="/chromium.svg"/> Chromium</a>
+						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
+					</div>
+				</div>
+				<a href="/dynamiccss">CSS as an alternative</a>
+			</div>
+		</div>
+		<div class="main">
+			<h1><img src="../firefox.svg"/> Disabling JavaScript in Firefox</h1>
+
+			<ol>
+				<li>In the address bar, type <code>about:config</code> and press enter.<br/>
+					<img class="gaps" src="firefox1.png" alt="about:config in address bar"/>
+				</li>
+				<li>If a warning is shown, click "Accept the Risk and Continue".<br/>
+					<img class="gaps" src="firefox2.png" alt='"Proceed with Caution" warning from Firefox'/>
+				</li>
+				<li>Search for <code>javascript.enabled</code> and change it to false.<br/>
+					<img class="gaps" src="firefox3.png" alt="javascript.enabled setting"/>
+				</li>
+			</ol>
+		</div>
+	</body>
+</html>

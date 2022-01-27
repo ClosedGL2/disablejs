@@ -1,0 +1,15 @@
+.accordion-toggle, .accordion-toggle + label + .accordion-content {
+	display: none;
+}
+.accordion-toggle:checked + label + .accordion-content {
+	display: block;
+}
+
+.accordion-toggle + label {
+	display: block;
+	background-color: #ccc;
+	padding: 0.5em;
+}
+.accordion-toggle + label:hover, .accordion-toggle:checked + label {
+	background-color: #bbb;
+}

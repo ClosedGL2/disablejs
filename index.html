@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>DisableJS - A website dedicated to not using JavaScript</title>
+		<link rel="stylesheet" href="/css.css"/>
+		<link rel="stylesheet" href="/jsstatus.css"/>
+		<link rel="shortcut icon" href="/favicon.ico"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<div class="nav-container">
+			<div class="nav">
+				<a href="/">Home</a>
+
+				<div class="dropdown">
+					Disabling JS &#9660;
+					<div class="dropdown-content">
+						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
+						<a href="/chromium"><img class="icon" src="/chromium.svg"/> Chromium</a>
+						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
+					</div>
+				</div>
+
+				<a href="/dynamiccss">CSS as an alternative</a>
+			</div>
+		</div>
+		<div class="main">
+			<h1>DisableJS</h1>
+			<h2>A website dedicated to not using JavaScript</h2>
+
+			<p>JavaScript is responsible for much of the nightmare that the modern web has become.</p>
+			<p>JavaScript annoys people, eats up bandwidth, bloats and slows down websites, comprimises security, and invades privacy.</p>
+
+			<input type="radio" id="js-enabled" name="jsstatus" checked=""/>
+			<noscript>
+				<!-- Will deselect the first radio button when JS is disabled -->
+				<input type="radio" name="jsstatus" checked=""/>
+			</noscript>
+			<div class="jsstatus script">
+				<p>JavaScript is currently enabled in your browser.<br/>See the instructions below on how to disable JavaScript.</p>
+			</div>
+			<div class="jsstatus noscript">
+				<p>JavaScript is currently disabled in your browser.<br/>Keep up the great work!</p>
+			</div>
+
+			<hr/>
+
+			<h1>Disabling JavaScript</h1>
+
+			<p><b class="warn">Warning:</b> Disabling JavaScript may disrupt your browsing experience on many sites. This would be less of an issue if more web developers <a href="/dynamiccss">used CSS instead of JavaScript.</a></p>
+
+			<h2>Browser-specific instructions</h2>
+
+			<div class="icon-links">
+				<a href="firefox/"><img src="firefox.svg"/><br/>Firefox</a>
+				<a href="chromium/"><img src="chromium.svg"/><br/>Chromium</a>
+			</div>
+
+			<h2>Using an extension</h2>
+
+			<div class="icon-links">
+				<a href="ublock/"><img src="ublockorigin.svg"/><br/>uBlock Origin</a>
+			</div>
+		</div>
+	</body>
+</html>

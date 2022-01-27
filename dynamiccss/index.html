@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dynamic CSS Page</title>
+		<link rel="stylesheet" href="../css.css"/>
+
+		<link rel="stylesheet" href="tabs.css"/>
+		<link rel="stylesheet" href="dialog.css"/>
+		<link rel="stylesheet" href="accordion.css"/>
+
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<div class="nav-container">
+			<div class="nav">
+				<a href="/">Home</a>
+				<div class="dropdown">
+					Disabling JS &#9660;
+					<div class="dropdown-content">
+						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
+						<a href="/chromium"><img class="icon" src="/chromium.svg"/> Chromium</a>
+						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
+					</div>
+				</div>
+				<a href="/dynamiccss">CSS as an alternative</a>
+			</div>
+		</div>
+		<div class="main">
+			<h1>Dynamic CSS Page</h1>
+
+			<p>Here we show off things that can be done with CSS to show that JavaScript is not necessary for many things.</p>
+			<p>CSS can go a long way, especially if you know how to leverage checkboxes and radio buttons.</p>
+
+			<h2>Tabbed Content</h2>
+
+			<div class="tab-content">
+				<input type="radio" id="tabs-tab1" name="tabs-tabs"/>
+				<label for="tabs-tab1">HTML</label>
+				<div class="tab">
+					<pre><code>&lt;div class="tab-content"&gt;
+	&lt;input type="radio" id="tab1" name="tabs" checked=""/&gt;
+	&lt;label for="tab1"&gt;Tab 1&lt;/label&gt;
+	&lt;div class="tab"&gt;
+		&lt;h3&gt;Tab 1&lt;/h3&gt;
+		&lt;p&gt;I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've taken to calling it, GNU plus Linux.&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;input type="radio" id="tab2" name="tabs"/&gt;
+	&lt;label for="tab2"&gt;Tab 2&lt;/label&gt;
+	&lt;div class="tab"&gt;
+		&lt;h3&gt;Tab 2&lt;/h3&gt;
+		&lt;p&gt;No Richard, it's Linux, not GNU/Linux.&lt;/p&gt;
+	&lt;/div&gt;
+
+	&lt;input type="radio" id="tab3" name="tabs"/&gt;
+	&lt;label for="tab3"&gt;Tab 3&lt;/label&gt;
+	&lt;div class="tab"&gt;
+		&lt;h3&gt;Tab 3&lt;/h3&gt;
+		&lt;p&gt;JavaScript and its consequences have been a disaster for the human race.&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+				<input type="radio" id="tabs-tab2" name="tabs-tabs"/>
+				<label for="tabs-tab2">CSS</label>
+				<div class="tab">
+					<pre><code>.tab-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tab-content &gt; input[type="radio"] {
+	display: none;
+}
+
+.tab-content &gt; label {
+	background-color: #bbb;
+	padding: 5px;
+	order: 1;
+}
+
+.tab-content &gt; label:hover {
+	background-color: #ccc;
+}
+
+.tab-content &gt; .tab {
+	display: none;
+	overflow: auto;
+	order: 2;
+}
+
+.tab-content &gt; input[type="radio"]:checked + label + .tab {
+	display: initial;
+	width: 100%;
+	padding: 5px;
+	background-color: #fff;
+}
+
+.tab-content &gt; input[type="radio"]:checked + label {
+	background-color: #fff;
+	font-weight: bold;
+}</code></pre>
+				</div>
+
+				<input type="radio" id="tabs-tab3" name="tabs-tabs" checked=""/>
+				<label for="tabs-tab3">Result</label>
+				<div class="tab" style="border: 3px solid #fff; padding: 2px; background-color: #ddd">
+					<div class="tab-content">
+						<input type="radio" id="tab1" name="tabs" checked=""/>
+						<label for="tab1">Tab 1</label>
+						<div class="tab">
+							<h3>Tab 1</h3>
+							<p>I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've taken to calling it, GNU plus Linux.</p>
+						</div>
+
+						<input type="radio" id="tab2" name="tabs"/>
+						<label for="tab2">Tab 2</label>
+						<div class="tab">
+							<h3>Tab 2</h3>
+							<p>No Richard, it's Linux, not GNU/Linux.</p>
+						</div>
+
+						<input type="radio" id="tab3" name="tabs"/>
+						<label for="tab3">Tab 3</label>
+						<div class="tab">
+							<h3>Tab 3</h3>
+							<p>JavaScript and its consequences have been a disaster for the human race.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>Closable Dialog</h2>
+
+			<div class="tab-content">
+				<input type="radio" id="dialog-tab1" name="dialog-tabs"/>
+				<label for="dialog-tab1">HTML</label>
+				<div class="tab">
+					<pre><code>&lt;input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/&gt;
+&lt;div class="dialog"&gt;
+	&lt;label class="dialog-close" for="dialog-toggle"&gt;X&lt;/label&gt;
+	&lt;p class="dialog-msg"&gt;No JS for as far as the eye can see!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+				<input type="radio" id="dialog-tab2" name="dialog-tabs"/>
+				<label for="dialog-tab2">CSS</label>
+				<div class="tab">
+					<pre><code>.dialog {
+	background-color: #8f8;
+	width: 100%;
+}
+
+.dialog-close {
+	float: right;
+	cursor: pointer;
+	background-color: #6d6;
+	margin: 0.25em;
+	padding: 0.25em;
+	padding-bottom: 0;
+}
+
+.dialog-msg {
+	clear: left;
+	padding: 0.5em;
+	margin: 0;
+}
+
+.dialog-toggle, .dialog-toggle + .dialog {
+	display: none;
+}
+
+.dialog-toggle:checked + .dialog {
+	display: inline-block;
+}</code></pre>
+				</div>
+
+				<input type="radio" id="dialog-tab3" name="dialog-tabs" checked=""/>
+				<label for="dialog-tab3">Result</label>
+				<div class="tab">
+					<input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/>
+					<div class="dialog">
+						<label class="dialog-close" for="dialog-toggle">X</label>
+						<p class="dialog-msg">No JS for as far as the eye can see!</p>
+					</div>
+				</div>
+			</div>
+
+			<h2>Accordion</h2>
+
+			<div class="tab-content">
+				<input type="radio" id="acc-tab1" name="acc-tabs"/>
+				<label for="acc-tab1">HTML</label>
+				<div class="tab">
+					<pre><code>&lt;input class="accordion-toggle" type="checkbox" id="acc1-toggle"/&gt;
+&lt;label for="acc1-toggle"&gt;Item 1&lt;/label&gt;
+&lt;div class="accordion-content"&gt;
+	&lt;h3&gt;Item 1&lt;/h3&gt;
+	&lt;p&gt;CSS Sandwich&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;input class="accordion-toggle" type="checkbox" id="acc2-toggle"/&gt;
+&lt;label for="acc2-toggle"&gt;Item 2&lt;/label&gt;
+&lt;div class="accordion-content"&gt;
+	&lt;h3&gt;Item 2&lt;/h3&gt;
+	&lt;p&gt;onclick="check_a_box_instead()"&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;input class="accordion-toggle" type="checkbox" id="acc3-toggle"/&gt;
+&lt;label for="acc3-toggle"&gt;Item 3&lt;/label&gt;
+&lt;div class="accordion-content"&gt;
+	&lt;h3&gt;Item 3&lt;/h3&gt;
+	&lt;p&gt;beep boop bap bwup ba beep&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+				<input type="radio" id="acc-tab2" name="acc-tabs"/>
+				<label for="acc-tab2">CSS</label>
+				<div class="tab">
+					<pre><code>.accordion-toggle, .accordion-toggle + label + .accordion-content {
+	display: none;
+}
+.accordion-toggle:checked + label + .accordion-content {
+	display: block;
+}
+
+.accordion-toggle + label {
+	display: block;
+	background-color: #ccc;
+	padding: 0.5em;
+}
+.accordion-toggle + label:hover, .accordion-toggle:checked + label {
+	background-color: #bbb;
+}</code></pre>
+				</div>
+
+				<input type="radio" id="acc-tab3" name="acc-tabs" checked=""/>
+				<label for="acc-tab3">Result</label>
+				<div class="tab">
+					<input class="accordion-toggle" type="checkbox" id="acc1-toggle"/>
+					<label for="acc1-toggle">Item 1</label>
+					<div class="accordion-content">
+						<h3>Item 1</h3>
+						<p>CSS Sandwich</p>
+					</div>
+
+					<input class="accordion-toggle" type="checkbox" id="acc2-toggle"/>
+					<label for="acc2-toggle">Item 2</label>
+					<div class="accordion-content">
+						<h3>Item 2</h3>
+						<p>onclick="check_a_box_instead()"</p>
+					</div>
+
+					<input class="accordion-toggle" type="checkbox" id="acc3-toggle"/>
+					<label for="acc3-toggle">Item 3</label>
+					<div class="accordion-content">
+						<h3>Item 3</h3>
+						<p>beep boop bap bwup ba beep</p>
+					</div>
+				</div>
+			</div>
+
+			<h2>Responsive Navigation Menu</h2>
+		</div>
+	</body>
+</html>

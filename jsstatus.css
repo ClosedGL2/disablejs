@@ -1,0 +1,22 @@
+input[name="jsstatus"] {
+	display: none;
+}
+
+input#js-enabled ~ .script, input#js-enabled:checked ~ .noscript {
+	display: none;
+}
+input#js-enabled:checked ~ .script, input#js-enabled ~ .noscript {
+	display: block;;
+}
+
+.jsstatus {
+	background-color: #fff;
+	padding: 0.5em;
+	text-align: center;
+}
+.script {
+	border: 2px solid red;
+}
+.noscript {
+	border: 2px solid lime;
+}
