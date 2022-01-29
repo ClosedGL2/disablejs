@@ -1,0 +1,31 @@
+.dialog {
+	background-color: #ff8;
+	width: 100%;
+}
+
+.dialog-close {
+	float: right;
+	cursor: pointer;
+	background-color: #dd6;
+	margin: 0.25em;
+	padding: 0.25em;
+	padding-bottom: 0;
+}
+
+.dialog-msg {
+	clear: left;
+	padding: 0.5em;
+	margin: 0;
+}
+
+.dialog-toggle, .dialog-toggle + .dialog {
+	display: none;
+}
+
+.dialog-toggle:checked + .dialog {
+	display: inline-block;
+}
+
+.dialog-msg * {
+	margin: 0.5em;
+}

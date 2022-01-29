@@ -4,6 +4,7 @@
 		<title>DisableJS - A website dedicated to not using JavaScript</title>
 		<link rel="stylesheet" href="/css.css"/>
 		<link rel="stylesheet" href="/jsstatus.css"/>
+		<link rel="stylesheet" href="/dialog-warning.css"/>
 		<link rel="shortcut icon" href="/favicon.ico"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
@@ -25,8 +26,20 @@
 			</div>
 		</div>
 		<div class="main">
+			<input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/>
+			<div class="dialog">
+				<label class="dialog-close" for="dialog-toggle">X</label>
+				<div class="dialog-msg" title="This dialog has been here since January 28, 2022">
+					<h3>Site under construction</h3>
+					<p>You should expect to find incomplete pages and content on this site.</p>
+				</div>
+			</div>
+
 			<h1>DisableJS</h1>
 			<h2>A website dedicated to not using JavaScript</h2>
+
+			<p>JavaScript is hugely responsible for the bloated mess the modern web is in.</p>
+			<p>JavaScript wastes lots of energy and bandwidth, annoys people, comprimises security and invades privacy.</p>
 
 			<input type="radio" id="js-enabled" name="jsstatus" checked=""/>
 			<noscript>
@@ -44,7 +57,7 @@
 
 			<h1>Disabling JavaScript</h1>
 
-			<p><b class="warn">Warning:</b> Disabling JavaScript may disrupt your browsing experience on many sites.</p>
+			<p><b class="warn">Warning:</b> Disabling JavaScript may break some websites that rely heavily on JavaScript.</p>
 
 			<h2>Browser-specific instructions</h2>
 
@@ -58,6 +71,17 @@
 			<div class="icon-links">
 				<a href="ublock/"><img src="ublockorigin.svg"/><br/>uBlock Origin</a>
 			</div>
+
+			<hr/>
+
+			<h1>Why JavaScript shouldn't be used</h1>
+
+			<ul>
+				<li><a href="jswasteful/">JavaScript wastes so much energy and bandwidth</a></li>
+				<li>JavaScript is annoying</li>
+				<li><a href="jssecurity/">JavaScript can comprimise your security</a></li>
+				<li>JavaScript can invade your privacy</li>
+			</ul>
 		</div>
 		<div class="footer">
 			<p>Feedback or suggestions? Submit an issue or pull request at <a href="https://github.com/ClosedGL2/disablejs/issues/new" target="blank">the GitHub repo</a></p>
