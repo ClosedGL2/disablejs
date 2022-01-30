@@ -7,9 +7,14 @@
 
 .accordion-toggle + label {
 	display: block;
-	background-color: #ccc;
+	background-color: #aaa;
 	padding: 0.5em;
 }
 .accordion-toggle + label:hover, .accordion-toggle:checked + label {
 	background-color: #bbb;
+}
+
+.accordion-content {
+	background-color: #fff;
+	padding: 5px;
 }

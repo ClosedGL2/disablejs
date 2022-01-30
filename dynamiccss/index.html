@@ -3,10 +3,16 @@
 	<head>
 		<title>Dynamic CSS Page</title>
 		<link rel="stylesheet" href="../css.css"/>
+		<style>
+details {
+	margin-top: 1em;
+}
+		</style>
 
 		<link rel="stylesheet" href="tabs.css"/>
 		<link rel="stylesheet" href="dialog.css"/>
 		<link rel="stylesheet" href="accordion.css"/>
+		<link rel="stylesheet" href="slideshow.css"/>
 
 		<link rel="shortcut icon" href="../favicon.ico"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -47,10 +53,35 @@
 			<h2>Tabbed Content</h2>
 
 			<div class="tab-content">
-				<input type="radio" id="tabs-tab1" name="tabs-tabs"/>
-				<label for="tabs-tab1">HTML</label>
+				<input type="radio" id="tab1" name="tabs" checked=""/>
+				<label for="tab1">Tab 1</label>
 				<div class="tab">
-					<pre><code>&lt;div class="tab-content"&gt;
+					<h3>Tab 1</h3>
+					<p>I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've taken to calling it, GNU plus Linux.</p>
+				</div>
+
+				<input type="radio" id="tab2" name="tabs"/>
+				<label for="tab2">Tab 2</label>
+				<div class="tab">
+					<h3>Tab 2</h3>
+					<p>No Richard, it's Linux, not GNU/Linux.</p>
+				</div>
+
+				<input type="radio" id="tab3" name="tabs"/>
+				<label for="tab3">Tab 3</label>
+				<div class="tab">
+					<h3>Tab 3</h3>
+					<p>I use Alpine, a distro without the GNU coreutils or any other GNU code. It's Linux, but it's not GNU/Linux.</p>
+				</div>
+			</div>
+
+			<details>
+				<summary>View code</summary>
+				<div class="tab-content">
+					<input type="radio" id="tabs-tab1" name="tabs-tabs" checked=""/>
+					<label for="tabs-tab1">HTML</label>
+					<div class="tab">
+						<pre><code>&lt;div class="tab-content"&gt;
 	&lt;input type="radio" id="tab1" name="tabs" checked=""/&gt;
 	&lt;label for="tab1"&gt;Tab 1&lt;/label&gt;
 	&lt;div class="tab"&gt;
@@ -72,12 +103,12 @@
 		&lt;p&gt;JavaScript and its consequences have been a disaster for the human race.&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-				</div>
+					</div>
 
-				<input type="radio" id="tabs-tab2" name="tabs-tabs"/>
-				<label for="tabs-tab2">CSS</label>
-				<div class="tab">
-					<pre><code>.tab-content {
+					<input type="radio" id="tabs-tab2" name="tabs-tabs"/>
+					<label for="tabs-tab2">CSS</label>
+					<div class="tab">
+						<pre><code>.tab-content {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -113,53 +144,35 @@
 	background-color: #fff;
 	font-weight: bold;
 }</code></pre>
-				</div>
-
-				<input type="radio" id="tabs-tab3" name="tabs-tabs" checked=""/>
-				<label for="tabs-tab3">Result</label>
-				<div class="tab" style="border: 3px solid #fff; padding: 2px; background-color: #ddd">
-					<div class="tab-content">
-						<input type="radio" id="tab1" name="tabs" checked=""/>
-						<label for="tab1">Tab 1</label>
-						<div class="tab">
-							<h3>Tab 1</h3>
-							<p>I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've taken to calling it, GNU plus Linux.</p>
-						</div>
-
-						<input type="radio" id="tab2" name="tabs"/>
-						<label for="tab2">Tab 2</label>
-						<div class="tab">
-							<h3>Tab 2</h3>
-							<p>No Richard, it's Linux, not GNU/Linux.</p>
-						</div>
-
-						<input type="radio" id="tab3" name="tabs"/>
-						<label for="tab3">Tab 3</label>
-						<div class="tab">
-							<h3>Tab 3</h3>
-							<p>JavaScript and its consequences have been a disaster for the human race.</p>
-						</div>
 					</div>
 				</div>
-			</div>
+			</details>
 
 			<h2>Closable Dialog</h2>
 
-			<div class="tab-content">
-				<input type="radio" id="dialog-tab1" name="dialog-tabs"/>
-				<label for="dialog-tab1">HTML</label>
-				<div class="tab">
-					<pre><code>&lt;input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/&gt;
+			<input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/>
+			<div class="dialog">
+				<label class="dialog-close" for="dialog-toggle">X</label>
+				<p class="dialog-msg">This website doesn't use cookies.</p>
+			</div>
+
+			<details>
+				<summary>View code</summary>
+				<div class="tab-content">
+					<input type="radio" id="dialog-tab1" name="dialog-tabs" checked=""/>
+					<label for="dialog-tab1">HTML</label>
+					<div class="tab">
+						<pre><code>&lt;input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/&gt;
 &lt;div class="dialog"&gt;
 	&lt;label class="dialog-close" for="dialog-toggle"&gt;X&lt;/label&gt;
 	&lt;p class="dialog-msg"&gt;This website doesn't use cookies.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-				</div>
+					</div>
 
-				<input type="radio" id="dialog-tab2" name="dialog-tabs"/>
-				<label for="dialog-tab2">CSS</label>
-				<div class="tab">
-					<pre><code>.dialog {
+					<input type="radio" id="dialog-tab2" name="dialog-tabs"/>
+					<label for="dialog-tab2">CSS</label>
+					<div class="tab">
+						<pre><code>.dialog {
 	background-color: #8f8;
 	width: 100%;
 }
@@ -186,26 +199,40 @@
 .dialog-toggle:checked + .dialog {
 	display: inline-block;
 }</code></pre>
-				</div>
-
-				<input type="radio" id="dialog-tab3" name="dialog-tabs" checked=""/>
-				<label for="dialog-tab3">Result</label>
-				<div class="tab">
-					<input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/>
-					<div class="dialog">
-						<label class="dialog-close" for="dialog-toggle">X</label>
-						<p class="dialog-msg">This website doesn't use cookies.</p>
 					</div>
 				</div>
-			</div>
+			</details>
 
 			<h2>Accordion</h2>
 
-			<div class="tab-content">
-				<input type="radio" id="acc-tab1" name="acc-tabs"/>
-				<label for="acc-tab1">HTML</label>
-				<div class="tab">
-					<pre><code>&lt;input class="accordion-toggle" type="checkbox" id="acc1-toggle"/&gt;
+			<input class="accordion-toggle" type="checkbox" id="acc1-toggle"/>
+			<label for="acc1-toggle">Item 1</label>
+			<div class="accordion-content">
+				<h3>Item 1</h3>
+				<p>CSS Sandwich</p>
+			</div>
+
+			<input class="accordion-toggle" type="checkbox" id="acc2-toggle"/>
+			<label for="acc2-toggle">Item 2</label>
+			<div class="accordion-content">
+				<h3>Item 2</h3>
+				<p>onclick="check_a_box_instead()"</p>
+			</div>
+
+			<input class="accordion-toggle" type="checkbox" id="acc3-toggle"/>
+			<label for="acc3-toggle">Item 3</label>
+			<div class="accordion-content">
+				<h3>Item 3</h3>
+				<p>Web 1.5?</p>
+			</div>
+
+			<details>
+				<summary>View code</summary>
+				<div class="tab-content">
+					<input type="radio" id="acc-tab1" name="acc-tabs" checked=""/>
+					<label for="acc-tab1">HTML</label>
+					<div class="tab">
+						<pre><code>&lt;input class="accordion-toggle" type="checkbox" id="acc1-toggle"/&gt;
 &lt;label for="acc1-toggle"&gt;Item 1&lt;/label&gt;
 &lt;div class="accordion-content"&gt;
 	&lt;h3&gt;Item 1&lt;/h3&gt;
@@ -223,14 +250,14 @@
 &lt;label for="acc3-toggle"&gt;Item 3&lt;/label&gt;
 &lt;div class="accordion-content"&gt;
 	&lt;h3&gt;Item 3&lt;/h3&gt;
-	&lt;p&gt;beep boop bap bwup ba beep&lt;/p&gt;
+	&lt;p&gt;Web 1.5?&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 				</div>
 
-				<input type="radio" id="acc-tab2" name="acc-tabs"/>
-				<label for="acc-tab2">CSS</label>
-				<div class="tab">
-					<pre><code>.accordion-toggle, .accordion-toggle + label + .accordion-content {
+					<input type="radio" id="acc-tab2" name="acc-tabs"/>
+					<label for="acc-tab2">CSS</label>
+					<div class="tab">
+						<pre><code>.accordion-toggle, .accordion-toggle + label + .accordion-content {
 	display: none;
 }
 .accordion-toggle:checked + label + .accordion-content {
@@ -239,40 +266,110 @@
 
 .accordion-toggle + label {
 	display: block;
-	background-color: #ccc;
+	background-color: #aaa;
 	padding: 0.5em;
 }
 .accordion-toggle + label:hover, .accordion-toggle:checked + label {
 	background-color: #bbb;
+}
+
+.accordion-content {
+	background-color: #fff;
+	padding: 5px;
 }</code></pre>
+					</div>
+				</div>
+			</details>
+
+			<h2>Slideshow</h2>
+
+			<div class="slideshow">
+				<input type="radio" name="slideshow-items" id="slideshow-item1" checked=""/>
+				<div class="slideshow-item">
+					<label for="slideshow-item3" class="slideshow-control prev">Previous</label>
+					<label for="slideshow-item2" class="slideshow-control next">Next</label>
+					<img class="slideshow-content" src="slideshow1.jpg"/>
 				</div>
 
-				<input type="radio" id="acc-tab3" name="acc-tabs" checked=""/>
-				<label for="acc-tab3">Result</label>
-				<div class="tab">
-					<input class="accordion-toggle" type="checkbox" id="acc1-toggle"/>
-					<label for="acc1-toggle">Item 1</label>
-					<div class="accordion-content">
-						<h3>Item 1</h3>
-						<p>CSS Sandwich</p>
-					</div>
+				<input type="radio" name="slideshow-items" id="slideshow-item2"/>
+				<div class="slideshow-item">
+					<label for="slideshow-item1" class="slideshow-control prev">Previous</label>
+					<label for="slideshow-item3" class="slideshow-control next">Next</label>
+					<img class="slideshow-content" src="slideshow2.jpg"/>
+				</div>
 
-					<input class="accordion-toggle" type="checkbox" id="acc2-toggle"/>
-					<label for="acc2-toggle">Item 2</label>
-					<div class="accordion-content">
-						<h3>Item 2</h3>
-						<p>onclick="check_a_box_instead()"</p>
-					</div>
-
-					<input class="accordion-toggle" type="checkbox" id="acc3-toggle"/>
-					<label for="acc3-toggle">Item 3</label>
-					<div class="accordion-content">
-						<h3>Item 3</h3>
-						<p>beep boop bap bwup ba beep</p>
-					</div>
+				<input type="radio" name="slideshow-items" id="slideshow-item3"/>
+				<div class="slideshow-item">
+					<label for="slideshow-item2" class="slideshow-control prev">Previous</label>
+					<label for="slideshow-item1" class="slideshow-control next">Next</label>
+					<img class="slideshow-content" src="slideshow3.jpg"/>
 				</div>
 			</div>
 
+			<details>
+				<summary>View code</summary>
+				<div class="tab-content">
+					<input type="radio" id="slides-tab1" name="slides-tabs" checked=""/>
+					<label for="slides-tab1">HTML</label>
+					<div class="tab">
+						<pre><code>&lt;div class="slideshow"&gt;
+	&lt;input type="radio" name="slideshow-items" id="slideshow-item1" checked=""/&gt;
+	&lt;div class="slideshow-item"&gt;
+		&lt;label for="slideshow-item3" class="slideshow-control prev"&gt;Previous&lt;/label&gt;
+		&lt;label for="slideshow-item2" class="slideshow-control next"&gt;Next&lt;/label&gt;
+		&lt;img class="slideshow-content" src="slideshow1.jpg"/&gt;
+	&lt;/div&gt;
+
+	&lt;input type="radio" name="slideshow-items" id="slideshow-item2"/&gt;
+	&lt;div class="slideshow-item"&gt;
+		&lt;label for="slideshow-item1" class="slideshow-control prev"&gt;Previous&lt;/label&gt;
+		&lt;label for="slideshow-item3" class="slideshow-control next"&gt;Next&lt;/label&gt;
+		&lt;img class="slideshow-content" src="slideshow2.jpg"/&gt;
+	&lt;/div&gt;
+
+	&lt;input type="radio" name="slideshow-items" id="slideshow-item3"/&gt;
+	&lt;div class="slideshow-item"&gt;
+		&lt;label for="slideshow-item2" class="slideshow-control prev"&gt;Previous&lt;/label&gt;
+		&lt;label for="slideshow-item1" class="slideshow-control next"&gt;Next&lt;/label&gt;
+		&lt;img class="slideshow-content" src="slideshow3.jpg"/&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+
+					<input type="radio" id="slides-tab2" name="slides-tabs"/>
+					<label for="slides-tab2">CSS</label>
+					<div class="tab">
+						<pre><code>.slideshow > input, .slideshow-item {
+	display: none;
+}
+.slideshow > input:checked + .slideshow-item {
+	display: inline-block;
+}
+
+.prev {
+	float: left;
+}
+.next {
+	float: right;
+}
+.slideshow-content {
+	clear: left;
+	width: 100%;
+}
+.slideshow-control {
+	background-color: #000;
+	color: #fff;
+	padding: 0.5em 0;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+}
+.slideshow-control:hover {
+	background-color: #222;
+}</code></pre>
+					</div>
+				</div>
+			</details>
 			<hr/>
 
 			<h2>See also</h2>

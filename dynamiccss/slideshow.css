@@ -1,0 +1,28 @@
+.slideshow > input, .slideshow-item {
+	display: none;
+}
+.slideshow > input:checked + .slideshow-item {
+	display: inline-block;
+}
+
+.prev {
+	float: left;
+}
+.next {
+	float: right;
+}
+.slideshow-content {
+	clear: left;
+	width: 100%;
+}
+.slideshow-control {
+	background-color: #000;
+	color: #fff;
+	padding: 0.5em 0;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+}
+.slideshow-control:hover {
+	background-color: #222;
+}
