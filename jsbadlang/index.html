@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Why JavaScript is a bad programming language</title>
+		<link rel="stylesheet" href="../css.css"/>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+	<body>
+		<div class="nav-container">
+			<div class="nav">
+				<a href="/">Home</a>
+
+				<div class="dropdown">
+					Disabling JS &#9660;
+					<div class="dropdown-content">
+						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
+						<a href="/chrome"><img class="icon" src="/chrome.svg"/> Chrome</a>
+						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					JavaScript... &#9660;
+					<div class="dropdown-content">
+						<a href="/jsbadlang">is a bad language</a>
+						<a href="/jsannoying">is annoying</a>
+						<a href="/jssecurity">comprimises security</a>
+						<a href="/jsprivacy">invades privacy</a>
+					</div>
+				</div>
+
+				<a href="/dynamiccss">CSS as an alternative</a>
+			</div>
+		</div>
+		<div class="main">
+			<h1>Why JavaScript is a bad programming language</h1>
+
+			<h2>Designed in 10 days</h2>
+
+			<p>Normal programming languages <a target="_blank" href="https://en.wikipedia.org/wiki/Python_(programming_language)#History">took</a> <a target="_blank" href="https://en.wikipedia.org/wiki/Java_(programming_language)#History">years</a> <a target="_blank" href="https://en.wikipedia.org/wiki/C_(programming_language)#History">to</a> <a target="_blank" href="https://en.wikipedia.org/wiki/Rust_(programming_language)#History">design</a>, but JavaScript was <a target="_blank" href="https://www.computer.org/csdl/mags/co/2012/02/mco2012020007.html">only designed in 10 days</a> before being released into the wild with all its bugs and imperfections.</p>
+
+			<h2>Insane operations</h2>
+			<p>So many operations in JavaScript produce wildly unexpected results.</p>
+			<pre><code>true + true == 2 &#8594; true
+true == '1' &#8594; true
+false == '0' &#8594; true
+false == 0 &#8594; true
+
+0 == '0' &#8594; true
+'\t' == 0 &#8594; true
+[] == 0 &#8594; true
+'\t' == [] &#8594; false
+
+'\t' == '0' &#8594; false
+'\t' == false &#8594; true
+
+[]+{} &#8594; "[object Object]"
+{}+[] &#8594; 0
+![] &#8594; false
++!+[] &#8594; 1
+[+!+[]]+[+[]]+[] &#8594; "10"
+
+9999999999999999 == 10000000000000000 &#8594; true</code></pre>
+
+			<hr/>
+
+			<h2>See also</h2>
+
+			<ul>
+				<li><a target="_blank" href="http://www.jsfuck.com/">JSFuck - Write any JavaScript with 6 Characters: []()!+</a></li>
+				<li><a target="_blank" href="https://whydoesitsuck.com/why-does-javascript-suck/">Why Does JavaScript Suck? | Why Does It Suck?</a></li>
+			</ul>
+		</div>
+		<div class="footer">
+			<p>Feedback or suggestions? Submit an issue or pull request at <a href="https://github.com/ClosedGL2/disablejs/issues/new" target="blank">the GitHub repo</a></p>
+		</div>
+	</body>
+</html>

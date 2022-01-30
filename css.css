@@ -101,6 +101,7 @@ code {
 	background-color: #fff;
 	font-family: monospace;
 	font-size: 10pt;
+	overflow-wrap: anywhere;
 }
 
 code b {

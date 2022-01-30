@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>How JavaScript can comprimise your security</title>
+		<title>Ways JavaScript can comprimise your security</title>
 		<link rel="stylesheet" href="../css.css"/>
 		<link rel="shortcut icon" href="../favicon.ico"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,22 +10,33 @@
 		<div class="nav-container">
 			<div class="nav">
 				<a href="/">Home</a>
+
 				<div class="dropdown">
 					Disabling JS &#9660;
 					<div class="dropdown-content">
 						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
-						<a href="/chromium"><img class="icon" src="/chromium.svg"/> Chromium</a>
+						<a href="/chrome"><img class="icon" src="/chrome.svg"/> Chrome</a>
 						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
 					</div>
 				</div>
-				<a href="/overusingjs">Overusing JS</a>
+
+				<div class="dropdown">
+					JavaScript... &#9660;
+					<div class="dropdown-content">
+						<a href="/jsbadlang">is a bad language</a>
+						<a href="/jsannoying">is annoying</a>
+						<a href="/jssecurity">comprimises security</a>
+						<a href="/jsprivacy">invades privacy</a>
+					</div>
+				</div>
+
 				<a href="/dynamiccss">CSS as an alternative</a>
 			</div>
 		</div>
 		<div class="main">
 			<h1>Ways JavaScript can comprimise your security</h1>
 
-			<h2>JavaScript can copy malicious commands to your clipboard</h2>
+			<h2>Copying malicious commands to your clipboard</h2>
 
 			<p>Sysadmins, cybersecurity researchers, and programmers often copy and paste commands from websites into their terminals.</p>
 			<p>For example, a guide may instruct people to update the system with the following:</p>
@@ -35,11 +46,19 @@
  </code></pre>
 			<p>Now instead of updating, the system is running some malicious payload from an attacker. In this case, the text in the clipboard has a return at the end, so it is executed before the user can react to it.</p>
 
-			<h2>JavaScript can fake link destinations</h2>
+			<h2>Faking link destinations</h2>
 
 			<pre><code>&lt;a href="https://example.com" onclick='window.location="page.html"'&gt;&amp;#960;&lt;/a&gt;</code></pre>
 
-			<p>The link above can appear to go to <a href="https://example.com" target="blank">example.com</a>, but will actually go <a href="page.html" target="blank">somewhere else</a> when clicked.</p>
+			<p>The link above can appear to go to <a href="https://example.com" target="_blank">example.com</a> in the status bar or bottom left corner, but will actually go <a href="page.html" target="_blank">somewhere else</a> when clicked. This could be used for phishing.</p>
+
+			<hr/>
+
+			<h2>See also</h2>
+
+			<ul>
+				<li><a target="_blank" href="https://invidious.snopyta.org/watch?v=pid5kmWXSj8">Do This For Maximum Security On The Web</a></li>
+			</ul>
 		</div>
 		<div class="footer">
 			<p>Feedback or suggestions? Submit an issue or pull request at <a href="https://github.com/ClosedGL2/disablejs/issues/new" target="blank">the GitHub repo</a></p>
