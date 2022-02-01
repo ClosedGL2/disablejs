@@ -36,8 +36,10 @@
 		<div class="main">
 			<h1>Ways JavaScript can comprimise your security</h1>
 
-			<h2>Copying malicious commands to your clipboard</h2>
+			<h2>Cross-site scripting (XSS)</h2>
+			<p>Some websites may have a vulnerability that allows an attacker to inject malicious JavaScript code into a website. The malicious JavaScript code will be executed by the user's browser, allowing the attacker to impersonate the user and collect sensitive data from the user.</p>
 
+			<h2>Copying malicious commands to your clipboard</h2>
 			<p>Sysadmins, cybersecurity researchers, and programmers often copy and paste commands from websites into their terminals.</p>
 			<p>For example, a guide may instruct people to update the system with the following:</p>
 			<pre><code>sudo apt update &amp;&amp; sudo apt upgrade</code><span style="font-size:0pt;color:white;">; echo "Not even attacking the visitor requires JS"</span></pre>
@@ -47,17 +49,15 @@
 			<p>Now instead of updating, the system is running some malicious payload from an attacker. In this case, the text in the clipboard has a return at the end, so it is executed before the user can react to it.</p>
 
 			<h2>Faking link destinations</h2>
-
 			<pre><code>&lt;a href="https://example.com" onclick='window.location="page.html"'&gt;&amp;#960;&lt;/a&gt;</code></pre>
-
 			<p>The link above can appear to go to <a href="https://example.com" target="_blank">example.com</a> in the status bar or bottom left corner, but will actually go <a href="page.html" target="_blank">somewhere else</a> when clicked. This could be used for phishing.</p>
 
 			<hr/>
 
 			<h2>See also</h2>
-
 			<ul>
 				<li><a target="_blank" href="https://invidious.snopyta.org/watch?v=pid5kmWXSj8">Do This For Maximum Security On The Web</a></li>
+				<li><a target="_blank" href="https://en.wikipedia.org/wiki/Cross-site_scripting">Cross-site scripting - Wikipedia</a></li>
 			</ul>
 		</div>
 		<div class="footer">
