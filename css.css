@@ -9,7 +9,7 @@ body {
 }
 
 .nav-container {
-	background-color: #444;
+	background-image: linear-gradient(#555, #333);
 }
 
 .nav {
@@ -27,7 +27,7 @@ body {
 }
 
 .nav > *:hover, .dropdown-content > *:hover {
-	background-color: #333;
+	background-image: linear-gradient(#222, #333);
 }
 
 .dropdown {
@@ -59,7 +59,7 @@ body {
 
 .main {
 	margin: auto;
-	width: 100%;
+	width: 95%;
 	max-width: 900px;
 	flex: 1;
 }
@@ -149,4 +149,5 @@ figure img {
 }
 figcaption {
 	font-style: italic;
+	margin-top: 0.5em;
 }
