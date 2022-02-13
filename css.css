@@ -143,17 +143,18 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0.5em;
 }
 
-figure {
-	margin: 0;
-}
-figure img {
+.figure img {
 	max-width: 50%;
 }
-figcaption {
+.figure p {
 	font-style: italic;
 	margin-top: 0.5em;
 }
 
 .hide {
 	display: none;
+}
+
+.strike {
+	text-decoration: line-through;
 }

@@ -4,11 +4,7 @@
 	<head>
 		<title>Dynamic CSS Page</title>
 		<link rel="stylesheet" href="../css.css"/>
-		<style type="text/css">
-details {
-	margin-top: 1em;
-}
-		</style>
+		<link rel="stylesheet" href="viewcode.css"/>
 
 		<link rel="stylesheet" href="tabs.css"/>
 		<link rel="stylesheet" href="dialog.css"/>
@@ -51,7 +47,7 @@ details {
 
 			<p>HTML gives webpages structure and content.</p>
 			<p>CSS gives webpages style.</p>
-			<p><s>JavaScript</s> CSS makes webpages interactive.</p>
+			<p><span class="strike">JavaScript</span> CSS makes webpages interactive.</p>
 
 			<h2>Tabbed Content</h2>
 
@@ -78,8 +74,9 @@ details {
 				</div>
 			</div>
 
-			<details>
-				<summary>View code</summary>
+			<input type="checkbox" class="viewcode-toggle" id="tab-viewcode"/>
+			<label for="tab-viewcode">Click to view code</label>
+			<div class="viewcode-content">
 				<div class="tab-content">
 					<input type="radio" id="tabs-tab1" name="tabs-tabs" checked="checked"/>
 					<label for="tabs-tab1">HTML</label>
@@ -123,6 +120,7 @@ details {
 .tab-content &gt; label {
 	background-color: #bbb;
 	padding: 5px;
+	margin: 2px;
 	order: 1;
 }
 
@@ -149,7 +147,7 @@ details {
 }</code></pre>
 					</div>
 				</div>
-			</details>
+			</div>
 
 			<h2>Closable Dialog</h2>
 
@@ -159,8 +157,9 @@ details {
 				<p class="dialog-msg">This website doesn't use cookies.</p>
 			</div>
 
-			<details>
-				<summary>View code</summary>
+			<input type="checkbox" class="viewcode-toggle" id="dialog-viewcode"/>
+			<label for="dialog-viewcode">Click to view code</label>
+			<div class="viewcode-content">
 				<div class="tab-content">
 					<input type="radio" id="dialog-tab1" name="dialog-tabs" checked="checked"/>
 					<label for="dialog-tab1">HTML</label>
@@ -204,7 +203,7 @@ details {
 }</code></pre>
 					</div>
 				</div>
-			</details>
+			</div>
 
 			<h2>Accordion</h2>
 
@@ -229,8 +228,9 @@ details {
 				<p>Web 1.5?</p>
 			</div>
 
-			<details>
-				<summary>View code</summary>
+			<input type="checkbox" class="viewcode-toggle" id="acc-viewcode"/>
+			<label for="acc-viewcode">Click to view code</label>
+			<div class="viewcode-content">
 				<div class="tab-content">
 					<input type="radio" id="acc-tab1" name="acc-tabs" checked="checked"/>
 					<label for="acc-tab1">HTML</label>
@@ -282,7 +282,7 @@ details {
 }</code></pre>
 					</div>
 				</div>
-			</details>
+			</div>
 
 			<h2>Slideshow</h2>
 
@@ -309,8 +309,9 @@ details {
 				</div>
 			</div>
 
-			<details>
-				<summary>View code</summary>
+			<input type="checkbox" class="viewcode-toggle" id="slides-viewcode"/>
+			<label for="slides-viewcode">Click to view code</label>
+			<div class="viewcode-content">
 				<div class="tab-content">
 					<input type="radio" id="slides-tab1" name="slides-tabs" checked="checked"/>
 					<label for="slides-tab1">HTML</label>
@@ -372,7 +373,7 @@ details {
 }</code></pre>
 					</div>
 				</div>
-			</details>
+			</div>
 			<hr/>
 
 			<h2>See also</h2>
@@ -382,7 +383,7 @@ details {
 			</ul>
 		</div>
 		<div class="footer">
-			<p>Feedback or suggestions? Submit an issue or pull request at <a href="https://github.com/ClosedGL2/disablejs/issues/new" target="blank">the GitHub repo</a></p>
+			<p>Feedback or suggestions? Submit an issue or pull request at <a href="https://github.com/ClosedGL2/disablejs/issues/new" target="_blank">the GitHub repo</a></p>
 		</div>
 	</body>
 </html>

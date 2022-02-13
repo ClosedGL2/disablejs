@@ -10,6 +10,8 @@
 .tab-content > label {
 	background-color: #bbb;
 	padding: 5px;
+	margin: 2px;
+	margin-bottom: 0;
 	order: 1;
 }
 

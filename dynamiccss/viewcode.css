@@ -1,0 +1,17 @@
+.viewcode-toggle, .viewcode-toggle + label + .viewcode-content {
+	display: none;
+}
+.viewcode-toggle:checked + label + .viewcode-content {
+	display: block;
+}
+
+.viewcode-toggle + label {
+	display: block;
+	margin: 0.75em;
+	padding: 0.25em;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.viewcode-toggle + label:hover, .viewcode-toggle:checked + label {
+	background-color: #bbb;
+}
