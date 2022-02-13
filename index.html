@@ -17,9 +17,9 @@
 				<div class="dropdown">
 					Disabling JS &#9660;
 					<div class="dropdown-content">
-						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
-						<a href="/chrome"><img class="icon" src="/chrome.svg"/> Chrome</a>
-						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
+						<a href="/firefox"><img class="icon" src="/firefox.svg" alt=""/> Firefox</a>
+						<a href="/chrome"><img class="icon" src="/chrome.svg" alt=""/> Chrome</a>
+						<a href="/ublock"><img class="icon" src="/ublockorigin.svg" alt=""/> uBlock Origin</a>
 					</div>
 				</div>
 
@@ -43,10 +43,10 @@
 			<p>JavaScript has played a huge role in the modern web being a bloated mess, and websites are having to load hundreds of KB worth of scripts just to load textual content.</p>
 			<p>The purpose of DisableJS is to help create a more lightweight web without scripting by avoiding JavaScript and guiding people on how to do the same.</p>
 
-			<input type="radio" id="js-enabled" name="jsstatus" checked=""/>
+			<input type="radio" id="js-enabled" name="jsstatus" checked="checked"/>
 			<noscript>
 				<!-- Will deselect the first radio button when JS is disabled -->
-				<input type="radio" name="jsstatus" checked=""/>
+				<p class="hide"><input type="radio" name="jsstatus" checked="checked"/></p>
 			</noscript>
 			<div class="jsstatus script">
 				<p>JavaScript is currently enabled in your browser.</p>
@@ -64,14 +64,14 @@
 			<h2>Browser-specific instructions</h2>
 
 			<div class="icon-links">
-				<a href="firefox/"><img src="firefox.svg"/><br/>Firefox</a>
-				<a href="chrome/"><img src="chrome.svg"/><br/>Chrome</a>
+				<a href="firefox/"><img src="firefox.svg" alt=""/><br/>Firefox</a>
+				<a href="chrome/"><img src="chrome.svg" alt=""/><br/>Chrome</a>
 			</div>
 
 			<h2>Using an extension</h2>
 
 			<div class="icon-links">
-				<a href="ublock/"><img src="ublockorigin.svg"/><br/>uBlock Origin</a>
+				<a href="ublock/"><img src="ublockorigin.svg" alt=""/><br/>uBlock Origin</a>
 			</div>
 
 			<hr/>

@@ -4,7 +4,7 @@
 	<head>
 		<title>Dynamic CSS Page</title>
 		<link rel="stylesheet" href="../css.css"/>
-		<style>
+		<style type="text/css">
 details {
 	margin-top: 1em;
 }
@@ -27,9 +27,9 @@ details {
 				<div class="dropdown">
 					Disabling JS &#9660;
 					<div class="dropdown-content">
-						<a href="/firefox"><img class="icon" src="/firefox.svg"/> Firefox</a>
-						<a href="/chrome"><img class="icon" src="/chrome.svg"/> Chrome</a>
-						<a href="/ublock"><img class="icon" src="/ublockorigin.svg"/> uBlock Origin</a>
+						<a href="/firefox"><img class="icon" src="/firefox.svg" alt=""/> Firefox</a>
+						<a href="/chrome"><img class="icon" src="/chrome.svg" alt=""/> Chrome</a>
+						<a href="/ublock"><img class="icon" src="/ublockorigin.svg" alt=""/> uBlock Origin</a>
 					</div>
 				</div>
 
@@ -56,7 +56,7 @@ details {
 			<h2>Tabbed Content</h2>
 
 			<div class="tab-content">
-				<input type="radio" id="tab1" name="tabs" checked=""/>
+				<input type="radio" id="tab1" name="tabs" checked="checked"/>
 				<label for="tab1">Tab 1</label>
 				<div class="tab">
 					<h3>Tab 1</h3>
@@ -81,7 +81,7 @@ details {
 			<details>
 				<summary>View code</summary>
 				<div class="tab-content">
-					<input type="radio" id="tabs-tab1" name="tabs-tabs" checked=""/>
+					<input type="radio" id="tabs-tab1" name="tabs-tabs" checked="checked"/>
 					<label for="tabs-tab1">HTML</label>
 					<div class="tab">
 						<pre><code>&lt;div class="tab-content"&gt;
@@ -153,7 +153,7 @@ details {
 
 			<h2>Closable Dialog</h2>
 
-			<input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/>
+			<input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked="checked"/>
 			<div class="dialog">
 				<label class="dialog-close" for="dialog-toggle">X</label>
 				<p class="dialog-msg">This website doesn't use cookies.</p>
@@ -162,7 +162,7 @@ details {
 			<details>
 				<summary>View code</summary>
 				<div class="tab-content">
-					<input type="radio" id="dialog-tab1" name="dialog-tabs" checked=""/>
+					<input type="radio" id="dialog-tab1" name="dialog-tabs" checked="checked"/>
 					<label for="dialog-tab1">HTML</label>
 					<div class="tab">
 						<pre><code>&lt;input class="dialog-toggle" type="checkbox" id="dialog-toggle" checked=""/&gt;
@@ -232,7 +232,7 @@ details {
 			<details>
 				<summary>View code</summary>
 				<div class="tab-content">
-					<input type="radio" id="acc-tab1" name="acc-tabs" checked=""/>
+					<input type="radio" id="acc-tab1" name="acc-tabs" checked="checked"/>
 					<label for="acc-tab1">HTML</label>
 					<div class="tab">
 						<pre><code>&lt;input class="accordion-toggle" type="checkbox" id="acc1-toggle"/&gt;
@@ -287,32 +287,32 @@ details {
 			<h2>Slideshow</h2>
 
 			<div class="slideshow">
-				<input type="radio" name="slideshow-items" id="slideshow-item1" checked=""/>
+				<input type="radio" name="slideshow-items" id="slideshow-item1" checked="checked"/>
 				<div class="slideshow-item">
 					<label for="slideshow-item3" class="slideshow-control prev">Previous</label>
 					<label for="slideshow-item2" class="slideshow-control next">Next</label>
-					<img class="slideshow-content" src="slideshow1.jpg"/>
+					<img class="slideshow-content" src="slideshow1.jpg" alt="Fountain in park downtown"/>
 				</div>
 
 				<input type="radio" name="slideshow-items" id="slideshow-item2"/>
 				<div class="slideshow-item">
 					<label for="slideshow-item1" class="slideshow-control prev">Previous</label>
 					<label for="slideshow-item3" class="slideshow-control next">Next</label>
-					<img class="slideshow-content" src="slideshow2.jpg"/>
+					<img class="slideshow-content" src="slideshow2.jpg" alt="Cracked pavement next to benches"/>
 				</div>
 
 				<input type="radio" name="slideshow-items" id="slideshow-item3"/>
 				<div class="slideshow-item">
 					<label for="slideshow-item2" class="slideshow-control prev">Previous</label>
 					<label for="slideshow-item1" class="slideshow-control next">Next</label>
-					<img class="slideshow-content" src="slideshow3.jpg"/>
+					<img class="slideshow-content" src="slideshow3.jpg" alt="Park downtown"/>
 				</div>
 			</div>
 
 			<details>
 				<summary>View code</summary>
 				<div class="tab-content">
-					<input type="radio" id="slides-tab1" name="slides-tabs" checked=""/>
+					<input type="radio" id="slides-tab1" name="slides-tabs" checked="checked"/>
 					<label for="slides-tab1">HTML</label>
 					<div class="tab">
 						<pre><code>&lt;div class="slideshow"&gt;
